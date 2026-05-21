@@ -1,60 +1,34 @@
 import streamlit as st
-
-# python -m streamlit run app.py
-
-# ------------------------------------------------- Sidebar
-
+st.title('⚡VΞLOZΞS Ξ FURIOSO – ALUGUΞL DΞ CARROS🏎️')
+st.sidebar.title("Escolha seu modelo")
 st.sidebar.image("logo.png")
-st.sidebar.title('Mateus Motors')
 
 
-carros = ['BMW','Mustang', 'Porsche', 'Fusca', 'Toro']
+carros = ['Carro da Xuxa','Fusquinha','Uno Henrique','Carro do Michael Jackson','Porsche']
 
-opcao = st.sidebar.selectbox('Escolha o carro que foi alugado', carros)
+opcao = st.sidebar.selectbox('Escolha o carro que foi alugado', carros) 
 
 
 
-# ----------------------------------------------- Principal 
-st.title('Mateus motors - Aluguel de Carros')
+
 
 st.image(f'{opcao}.png')
-st.markdown(f'## Você alugou o modelo: {opcao}')
+st.markdown(f'Você alugou o modelo: {opcao}')
 st.markdown('---')
 
 dias = st.text_input(f'Por quantos dias o {opcao} foi alugado?')
-km = st.text_input(f'Quantos km você rodou com o {opcao}?')
+km = st. text_input(f'Quantos km você rodou com o {opcao}?')
+if opcao ==   'Carro da Xuxa':
+    diaria = 350
 
-if opcao == 'BMW':
-    diaria = 450
-
-elif opcao == 'Mustang':
+elif opcao == 'Fusquinha':
+    diaria = 120
+    
+elif opcao == 'Uno Henrique':
     diaria = 500
 
-elif opcao == 'Porsche':
-    diaria = 300
+elif opcao == 'Carro do Michael Jackson':
+    diaria = 450
 
-elif opcao == 'Fusca':
-    diaria = 250
-
-elif opcao == 'Toro':
-    diaria = 550
-
-
-
-
-
-if st.button('Calcular'):
-    dias = int(dias)
-    km = float(km)
-
-    total_dias = dias * diaria
-    total_km = km * 0.15
-    aluguel_total = total_dias+total_km
-
-    st.warning(f'Você alugou o {opcao} por {dias} dias e rodou {km}km. O valor total a pagar é R${aluguel_total:.2f}')
-
-
-
-
-
-
+elif opcao == 'Porshe':
+    diaria = 600
