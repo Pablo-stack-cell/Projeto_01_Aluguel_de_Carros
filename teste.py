@@ -1,0 +1,10 @@
+import pyautogui as aut
+aut.press('win')
+aut.sleep(1)
+aut.write('https://www.youtube.com/shorts/IdXrQQvX24Q00',interval=0.1 )
+aut.press('enter')
+aut.sleep(3)
+aut.press('pesquisar')
+aut.sleep(1)
+aut.write("Skibid Toilet",interval=0.1)
+aut.press('enter') 
